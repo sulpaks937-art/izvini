@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+<style>
+body{
+font-family:Arial;
+background:#ffe6f2;
+text-align:center;
+padding-top:80px;
+}
+button{
+font-size:22px;
+padding:12px 30px;
+margin:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+#yes{background:#4CAF50;color:white;}
+#no{background:#f44336;color:white;}
+h1{color:#d63384;}
+</style>
+</head>
+<body>
+
+<h1 id="text">Жаным, прости пожалуйста ❤️</h1>
+
+<button id="yes">Да</button>
+<button id="no">Нет</button>
+
+<script>
+let step=0;
+
+document.getElementById("yes").onclick=function(){
+document.body.innerHTML="<h1>Урааа! ❤️<br>Люблю тебя! 🥹💖</h1>";
+}
+
+document.getElementById("no").onclick=function(){
+
+step++;
+
+if(step==1){
+document.getElementById("text").innerHTML="Жаным, пожалуйста... 🥺";
+}
+else if(step==2){
+document.getElementById("text").innerHTML="Последний шанс даю, жан ❤️";
+}
+else if(step==3){
+document.getElementById("text").innerHTML="Все равно мы женимся ❤️ Куда ты убежишь? 😘";
+document.getElementById("no").style.display="none";
+document.getElementById("yes").innerHTML="Прощаю ❤️";
+}
+}
+</script>
+
+</body>
+</html>
